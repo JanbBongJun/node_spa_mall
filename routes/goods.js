@@ -45,7 +45,7 @@ router.get("/goods", (req, res) => {
 
 router.get("/goods/:goodsId", (req, res) => {
   const { goodsId } = req.params;
-  const [detail] = goods.filter((goods) => goods.goodsId === Number(goodsId));
+  const [detail] = goods.filter((goods) => goods.goodsId === Number(goodsId)); //배열의 첫번째 변수를 detail에 할당
   res.json({ detail });
 });
 
